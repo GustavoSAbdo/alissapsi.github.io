@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alissa Karolski Pereira - Psicóloga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-purple: #A05F9C;
+            --light-pink: #F8F0F7;
+            --dark-purple-text: #4A2C48;
+            --white: #FFFFFF;
+            --heading-font: 'Lora', serif;
+            --body-font: 'Montserrat', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--body-font);
+            color: var(--dark-purple-text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark-purple-text);
+        }
+
+        .hero {
+            background-color: var(--light-pink);
+            text-align: center;
+            padding: 100px 0;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-purple);
+            color: var(--white);
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--dark-purple-text);
+            transform: translateY(-3px);
+        }
+        
+        .about-section {
+            background-color: var(--white);
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .about-image img {
+            max-width: 300px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+        }
+        
+        .approach-section {
+            background-color: var(--light-pink);
+        }
+        
+        .approach-section .container {
+            text-align: center;
+        }
+
+        .approach-section h2 {
+            font-size: 2.5rem;
+        }
+        
+        .approach-content {
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        .approach-topics {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .topic-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            font-weight: 500;
+            min-width: 250px;
+        }
+        
+        .services-section {
+            text-align: center;
+        }
+
+        .services-section h2 {
+             font-size: 2.5rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .service-item {
+            background-color: var(--light-pink);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .service-item h3 {
+            font-family: var(--body-font);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .cta-section {
+            background-color: var(--primary-purple);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+        }
+
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .cta-section .cta-button {
+            background-color: var(--white);
+            color: var(--primary-purple);
+        }
+
+        .cta-section .cta-button:hover {
+            background-color: var(--light-pink);
+        }
+
+        footer {
+            background-color: var(--dark-purple-text);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        footer h3 {
+            color: var(--white);
+            margin-bottom: 5px;
+        }
+
+        footer p {
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+        }
+        
+        .social-icons svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--white);
+            transition: fill 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover svg {
+            fill: var(--primary-purple);
+            transform: scale(1.1);
+        }
+        
+        .footer-credits {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text h2, .approach-section h2, .services-section h2, .cta-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Inicie sua jornada de autoconhecimento e bem-estar.</h1>
+                <p>Sou Alissa Karolski Pereira, psicóloga com base na psicanálise, e estou aqui para criar um espaço seguro de escuta e acolhimento para você.</p>
+                <a href="https://wa.me/5511964107025" target="_blank" class="cta-button">Agende uma Conversa Inicial</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="about-section">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="WhatsApp Image 2025-06-10 at 12.08.48.jpeg" alt="Foto ">
+                </div>
+                <div class="about-text">
+                    <h2>Prazer, sou a Alissa!</h2>
+                    <p>Psicóloga formada desde 2023 (CRP: 06/208645), sou completamente apaixonada pela minha profissão e pela complexidade da mente humana. Minha maior motivação é acompanhar o processo de vida de cada indivíduo, oferecendo um ambiente de confiança e empatia.</p>
+                    <p>Com uma base teórica na psicanálise, busco auxiliar meus pacientes a encontrar clareza e a construir um caminho com mais sentido e leveza.</p>
+                    <p>E, claro, fora do consultório, tenho um "coração de mãe" (onde sempre cabe mais um!), adoro relaxar assistindo a vídeos de gatinhos e corujas e me inspiro nas pequenas alegrias do dia a dia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="abordagem" class="approach-section">
+            <div class="container">
+                <h2>Como funciona a terapia? Minha Abordagem.</h2>
+                <div class="approach-content">
+                    <h3>Base na Psicanálise</h3>
+                    <p>Minha prática clínica é fundamentada na psicanálise. Isso significa que, juntos, vamos explorar as raízes das suas questões, indo além dos sintomas. Investigaremos pensamentos, sonhos, memórias e sentimentos para promover um autoconhecimento profundo e duradouro. O objetivo não é apenas resolver um problema pontual, mas proporcionar uma transformação real na forma como você se enxerga e se relaciona com o mundo.</p>
+                </div>
+                <div class="approach-topics">
+                    <div class="topic-card">Atendimento para: Adultos e Adolescentes</div>
+                    <div class="topic-card">Sessões: Online, com sigilo e segurança</div>
+                    <div class="topic-card">Foco: Escuta ativa, sem julgamentos</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="services-section">
+            <div class="container">
+                <h2>A terapia pode te ajudar se você busca...</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <h3>Autoconhecimento</h3>
+                        <p>Entender melhor seus sentimentos, comportamentos e desejos.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Lidar com a Ansiedade</h3>
+                        <p>Desenvolver ferramentas para gerenciar a preocupação excessiva e o estresse.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Transições de Vida</h3>
+                        <p>Navegar por momentos de mudança, como carreira, luto ou novos ciclos.</p>
+                    </div>
+                     <div class="service-item">
+                        <h3>Fortalecer a Autoestima</h3>
+                        <p>Construir uma relação mais saudável e compassiva com você.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="cta-section">
+            <div class="container">
+                <h2>Vamos dar o primeiro passo juntos?</h2>
+                <p>Se você sente que é o momento de cuidar da sua saúde mental, me envie uma mensagem. Estou disponível para tirar suas dúvidas e explicar como podemos iniciar sua jornada terapêutica.</p>
+                <a href="https://wa.me/5511964107025" target="_blank" class="cta-button">Falar com a Psicóloga no WhatsApp</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h3>Alissa Karolski Pereira</h3>
+            <p>Psicóloga - CRP 06/208645</p>
+            <div class="social-icons">
+                <a href="https://wa.me/5511964107025" target="_blank" title="WhatsApp">
+                    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.37 21.82 12.04 21.82C17.5 21.82 21.95 17.37 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.04 3.67C16.57 3.67 20.28 7.38 20.28 11.92C20.28 16.46 16.57 20.17 12.04 20.17C10.46 20.17 8.96 19.73 7.65 18.96L7.3 18.78L4.46 19.59L5.28 16.81L5.09 16.45C4.24 15.04 3.79 13.47 3.79 11.91C3.79 7.38 7.5 3.67 12.04 3.67M17.37 14.4C17.14 14.95 16.23 15.42 15.82 15.47C15.41 15.52 14.88 15.69 14.44 15.52C13.63 15.26 12.59 14.86 11.69 13.96C10.63 12.9 9.97 11.73 9.82 11.41C9.66 11.1 9.04 9.53 9.3 8.93C9.56 8.33 10.12 8.37 10.37 8.62C10.5 8.74 10.63 8.87 10.8 9.12C10.91 9.3 11 9.42 10.87 9.61C10.74 9.81 10.43 10.23 10.24 10.45C10.05 10.67 9.86 10.72 9.63 10.6C9.4 10.47 8.96 10.31 8.44 10.06C7.82 9.75 7.33 9.22 7.15 8.86C6.98 8.5 6.98 8.16 7.11 7.88C7.26 7.55 7.62 7.21 7.94 7.08C8.25 6.96 8.56 6.95 8.81 7C9.06 7.05 9.28 7.07 9.48 7.12C9.83 7.21 10.07 7.6 10.2 8.16C10.23 8.28 10.25 8.41 10.24 8.53C10.24 8.67 10.22 8.78 10.21 8.85L10.16 9.04C10.96 10.45 12.03 11.51 13.45 12.33L13.64 12.28C13.71 12.26 13.82 12.25 13.96 12.25C14.08 12.25 14.21 12.27 14.33 12.3C14.89 12.43 15.37 12.67 15.46 13.02C15.55 13.37 15.55 13.72 15.38 14C15.22 14.28 15.02 14.43 14.89 14.53C14.76 14.63 14.6 14.75 14.83 15.03C15.06 15.31 15.68 15.86 16.23 16.11C16.83 16.38 17.21 16.36 17.53 16.21C17.91 16.03 18.44 15.47 18.67 14.92C18.9 14.37 18.7 13.92 18.58 13.75C18.45 13.58 18.23 13.48 18 13.31C17.77 13.14 17.58 13.06 17.44 12.86C17.3 12.66 17.32 12.46 17.45 12.33C17.62 12.17 17.89 11.96 18.15 11.7C18.3 11.55 18.43 11.45 18.55 11.3C18.78 11.04 18.75 10.75 18.58 10.45C18.4 10.15 17.81 9.59 17.47 9.26C17.21 9 16.88 8.78 16.5 8.78C16.13 8.78 15.79 8.93 15.54 9.17C15.3 9.42 14.78 9.99 14.53 10.24C14.29 10.48 14.04 10.73 13.8 10.97C13.58 11.19 13.34 11.42 13.02 11.61C12.4 12.03 11.83 12.36 11.23 12.6C10.9 12.74 10.58 12.86 10.23 12.95C9.93 13.03 9.53 13.11 9.43 13.33C9.33 13.55 9.33 13.86 9.48 14.16C9.66 14.49 10.1 15.06 10.41 15.35C10.78 15.69 11.26 15.91 11.78 16.05C12.1 16.13 12.45 16.14 12.79 16.1C13.2 16.05 14.03 15.86 14.33 15.81C14.62 15.76 15.03 15.74 15.28 15.83C15.53 15.93 15.7 16.07 15.93 16.36C16.16 16.65 16.71 17.23 16.96 17.38C17.21 17.53 17.51 17.56 17.75 17.51C18 17.46 18.78 17.01 19.06 16.4C19.33 15.79 19.33 15.09 19.21 14.81C19.08 14.53 18.83 14.4 18.58 14.23C18.33 14.06 18.06 13.98 17.86 14.03C17.61 14.08 17.47 14.18 17.37 14.4Z"/></svg>
+                </a>
+                <a href="mailto:contatopsikarolski@gmail.com" target="_blank" title="Email">
+                    <svg viewBox="0 0 24 24"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 11L4 6H20ZM20 18H4V8L12 13L20 8V18Z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/karolskipsi/" target="_blank" title="Instagram">
+                    <svg viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
